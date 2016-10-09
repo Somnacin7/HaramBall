@@ -8,13 +8,19 @@ public class LeapInput : MonoBehaviour
     public Transform stage;
     public Transform player;
     LeapServiceProvider provider;
+    public bool isDebug = false;
 
     // Use this for initialization
     void Start()
     {
         provider = FindObjectOfType<LeapServiceProvider>() as LeapServiceProvider;
-        player.parent = stage;
-        player.GetComponent<Rigidbody>().isKinematic = true;
+
+        if (!isDebug)
+        {
+            player.parent = stage;
+            player.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        
     }
 
     // Update is called once per frame
