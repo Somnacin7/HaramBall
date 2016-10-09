@@ -6,12 +6,15 @@ using Leap.Unity;
 public class LeapInput : MonoBehaviour
 {
     public Transform stage;
+    public Transform player;
     LeapServiceProvider provider;
 
     // Use this for initialization
     void Start()
     {
         provider = FindObjectOfType<LeapServiceProvider>() as LeapServiceProvider;
+        player.parent = stage;
+        player.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame
@@ -23,9 +26,19 @@ public class LeapInput : MonoBehaviour
         {
             if (hand.IsRight)
             {
+                if (player.parent != null)
+                {
+                    Invoke("UnparentPlayer", 2);
+                }
                 var handRotation = hand.Rotation.ToQuaternion();
                 stage.rotation = handRotation;
             }
         }
+    }
+
+    void UnparentPlayer()
+    {
+        player.parent = null;
+        player.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
