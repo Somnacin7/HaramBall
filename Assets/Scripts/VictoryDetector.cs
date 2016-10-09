@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VictoryDetector : MonoBehaviour {
+public class VictoryDetector : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start()
+    {
+
+    }
+    void OnTriggerEnter(Collider player)
+    {
+        if (player.gameObject.tag == "Player")
+        {
+            //Victory stuff
+        }
+    }
 }
