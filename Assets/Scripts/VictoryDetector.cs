@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-<<<<<<< HEAD
 public class VictoryDetector : MonoBehaviour {
 
 	public GameObject victory;
@@ -24,20 +22,4 @@ public class VictoryDetector : MonoBehaviour {
 		}
 	}
 }
-=======
-public class VictoryDetector : MonoBehaviour
-{
 
-    void Start()
-    {
-
-    }
-    void OnTriggerEnter(Collider player)
-    {
-        if (player.gameObject.tag == "Player")
-        {
-            //Victory stuff
-        }
-    }
-}
->>>>>>> grey
