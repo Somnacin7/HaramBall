@@ -12,7 +12,7 @@ public class PortalIn : MonoBehaviour {
 
         if (player.gameObject.tag == "Player")
         {
-            Vector3 newPos = teleOut.position + Vector3.up;
+            Vector3 newPos = teleOut.position;
             player.transform.position = newPos;
         }
     }
