@@ -23,8 +23,6 @@ public class LeapInput : MonoBehaviour
         {
             if (hand.IsRight)
             {
-                Debug.Log("Dir:\t" + hand.Direction.ToVector4());
-                
                 var dir = hand.Direction.ToVector3();
                 stage.rotation = hand.Rotation.ToQuaternion();
             }
