@@ -1,10 +1,6 @@
-<<<<<<< HEAD
+
 ﻿using UnityEngine;
 using System.Collections;
-=======
-﻿using UnityEngine;
-using System.Collections;
->>>>>>> grey
 using UnityEngine.SceneManagement;
 
 public class FallDetector : MonoBehaviour
