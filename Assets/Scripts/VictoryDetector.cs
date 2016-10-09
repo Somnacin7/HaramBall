@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class victoryDetector : MonoBehaviour {
+public class VictoryDetector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
